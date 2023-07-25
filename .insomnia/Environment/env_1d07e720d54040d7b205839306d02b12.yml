@@ -1,0 +1,20 @@
+_id: env_1d07e720d54040d7b205839306d02b12
+type: Environment
+parentId: env_86ab734e79df7a17d30e5dfe1ce9d5eaf925ba2a
+modified: 1690271611906
+created: 1690271605205
+name: local
+data:
+  clientUrl: http://localhost:8080/
+  generatorUrl: http://localhost:8080/
+  foreignExchangeUrl: http://localhost:8080/
+  trafficEvaluatorUrl: http://localhost:8080/
+dataPropertyOrder:
+  "&":
+    - clientUrl
+    - generatorUrl
+    - foreignExchangeUrl
+    - trafficEvaluatorUrl
+color: null
+isPrivate: false
+metaSortKey: 1690271605205

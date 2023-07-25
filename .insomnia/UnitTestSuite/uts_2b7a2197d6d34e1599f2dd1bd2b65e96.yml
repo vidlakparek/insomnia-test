@@ -1,0 +1,6 @@
+_id: uts_2b7a2197d6d34e1599f2dd1bd2b65e96
+type: UnitTestSuite
+parentId: wrk_d8e3c352c84a4a9f903bbfb20eb1ea20
+modified: 1690271534195
+created: 1690271534195
+name: Test get simulator config

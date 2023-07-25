@@ -1,0 +1,21 @@
+_id: req_e30660b8ecb64f9387d50ad1f3a01dc1
+type: Request
+parentId: fld_2438c8e796164116a2800d9a85a37780
+modified: 1690271683721
+created: 1690271656853
+url: "{{generatorUrl}}/v1/simulator/transactions/config"
+name: Get simulator config
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1690271656853
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
