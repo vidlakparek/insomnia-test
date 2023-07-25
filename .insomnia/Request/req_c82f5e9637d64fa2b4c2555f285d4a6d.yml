@@ -1,0 +1,54 @@
+_id: req_c82f5e9637d64fa2b4c2555f285d4a6d
+type: Request
+parentId: fld_0bff045dba4340af91b49ef496d73a1c
+modified: 1690285078822
+created: 1690285075452
+url: "{{generatorUrl}}/v1/bootstrap/transactions"
+name: LOCAL Demo GEN - TX - BOOT - All options
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientProductContracts": [
+            {
+                "clientId": "TP230626202306261000000705",
+                "productContractNumber": "TP230626202306261000000705ONE1"
+            }
+        ],
+        "transactionPrefix": "TP230626",
+        "transactionCount": 10,
+        "daysCount": 6,
+        "endDate": "2023-06-20",
+        "minimalCarCount": 5,
+        "countries": ["AT", "DE", "SK"],
+        "countriesPercentDistribution": [50, 50],
+        "services": ["FUEL", "TOLL_BILL", "TOLL_EST"],
+        "servicesPercentDistribution": [60, 20, 20],
+        "statuses": ["ACCEPTED", "ADJUSTED", "CANCELLED"],
+        "statusesPercentDistribution": [90, 5, 5],
+        "invoicedServicesPercentage": {
+           "FUEL": 100
+        },
+        "invoiceStatuses": ["PAID", "UNPAID"],
+        "invoiceStatusesPercentDistribution": [80, 20],
+        "dryRun": true,    
+        "runtimeEnvironment": {
+            "example.instances.count": "1"
+        },
+        "publishProcessingInfoEvents": false
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690284919097.125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

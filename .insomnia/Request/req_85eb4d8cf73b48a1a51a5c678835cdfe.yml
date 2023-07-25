@@ -1,0 +1,25 @@
+_id: req_85eb4d8cf73b48a1a51a5c678835cdfe
+type: Request
+parentId: fld_a88a60a36024458a987a13e355ff54f3
+modified: 1690286890143
+created: 1690286871977
+url: "{{generatorUrl}}/v1/countries/:countryCode/tollGatePairs"
+name: Get All Toll Gate Pairs for Country
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_d76ec9c0333c4c70b213c2e9e92f9b3c
+    name: countryCode
+    value: CZ
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1690286871977
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,31 @@
+_id: req_db8e3590ad854e9285bc3f64af3bb1c3
+type: Request
+parentId: fld_d319ff92fe3c4b87b878983ee553e292
+modified: 1690285351383
+created: 1690285328090
+url: "{{generatorUrl}}/v1/simulator/transactions/config/productContracts"
+name: GEN - TX - SIM - Add ProductContracts
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    [
+        {
+            "clientId": "JB20230130",
+            "productContractNumber": "1000000040"
+        }
+    ]
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285245165
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

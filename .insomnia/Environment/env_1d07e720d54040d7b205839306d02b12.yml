@@ -1,7 +1,7 @@
 _id: env_1d07e720d54040d7b205839306d02b12
 type: Environment
 parentId: env_86ab734e79df7a17d30e5dfe1ce9d5eaf925ba2a
-modified: 1690273202089
+modified: 1690286404254
 created: 1690271605205
 name: local
 data:
@@ -15,6 +15,6 @@ dataPropertyOrder:
     - generatorUrl
     - foreignExchangeUrl
     - trafficEvaluatorUrl
-color: null
+color: "#ff0000"
 isPrivate: false
 metaSortKey: 1690271605205

@@ -1,0 +1,37 @@
+_id: req_93c4df906bf44a95acebb9c587e940a5
+type: Request
+parentId: fld_8c3f2362fbef406a8fa702ea61824a06
+modified: 1690285673449
+created: 1690285622070
+url: "{{generatorUrl}}/v1/countries"
+name: Add Country
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "countryCode": "HU",
+        "currency": "HUF",
+        "vatRate": 27,
+        "unitGrossPrice": {
+            "min": 500,
+            "max": 650
+        },
+        "tollGrossPricePerKm": 62.48,
+        "tollVatRate": 0
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_3666c893825b4e25a902c45fe08e49d7
+authentication: {}
+metaSortKey: -1690285540093
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

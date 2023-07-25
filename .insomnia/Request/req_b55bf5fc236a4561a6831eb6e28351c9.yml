@@ -1,0 +1,36 @@
+_id: req_b55bf5fc236a4561a6831eb6e28351c9
+type: Request
+parentId: fld_8372132a3d734a299ae991364d52c706
+modified: 1690284894699
+created: 1690284879263
+url: "{{generatorUrl}}/v1/bootstrap/clients"
+name: GEN - CLI - BOOT -  ONE
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientCount": 1,
+        "productContractCount": 1,
+        "productContractTypes": ["ONE"],
+        "productContractTypePercentDistribution": [100],
+        "productContractRiskProfiles": ["A"],
+        "productContractRiskProfilesPercentDistribution": [100],
+        "totalCreditLimitMin": 100000,
+        "totalCreditLimitMax": 100000,
+        "resultViews": ["TRANSACTIONS_API_INPUT", "TREE_FULL", "STATISTICS"]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690284879263
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

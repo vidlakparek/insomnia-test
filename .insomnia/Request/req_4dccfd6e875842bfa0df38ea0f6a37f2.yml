@@ -1,0 +1,83 @@
+_id: req_4dccfd6e875842bfa0df38ea0f6a37f2
+type: Request
+parentId: fld_bc93fe376fce4039bb6b9947be260810
+modified: 1690285456453
+created: 1690285392806
+url: "{{generatorUrl}}/v1/demo/fixedTransactionsPerDay"
+name: GEN - TX - DEMO - client1
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "JB20221108",
+        "productContractNumber": "NBR12345",
+        "upToDateIncluded": "2022-11-08",
+        "daysGenerating": 10,
+        "transactionsPerDay": 5,
+        "consumptionMin": 220.0,
+        "consumptionMax": 240.0,
+        "countries": {
+            "SK": {
+                "countryCode": "SK",
+                "currency": "EUR",
+                "fuelVat": 0.20,
+                "fuelPriceMin": 1.7,
+                "fuelPriceMax": 1.9,
+                "fuelLocationSiteNames": [
+                    "SHELL BRATISLAVA-BAJKALSKÁ",
+                    "SHELL BRATISLAVA POPRADSKÁ",
+                    "SHELL PIEŠŤANY-KRAJINSKÁ"
+                ]
+            },
+            "CZ": {
+                "countryCode": "CZ",
+                "currency": "CZK",
+                "fuelVat": 0.21,
+                "fuelPriceMin": 44.60,
+                "fuelPriceMax": 45.90,
+                "fuelLocationSiteNames": [
+                    "SHELL PRAHA VOTICE",
+                    "SHELL ŘÍČANY",
+                    "EUROWAG - KOZOMÍN",
+                    "EUROWAG - MODLETICE"
+                ]
+            }
+        },
+        "cars": [
+            {
+                "licensePlate": "LM 941 DF",
+                "cardNumber": "7896631002962030",
+                "obu": "124847"
+            },
+            {
+                "licensePlate": "BA 012 AA",
+                "cardNumber": "5233320343803210",
+                "obu": "984461"
+            },
+            {
+                "licensePlate": "PN 486 DC",
+                "cardNumber": "471603994169830",
+                "obu": "674547"
+            },
+            {
+                "licensePlate": "KE 777 LB",
+                "cardNumber": "448514342618281",
+                "obu": "994714"
+            }
+        ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285392806
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

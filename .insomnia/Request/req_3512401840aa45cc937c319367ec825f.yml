@@ -1,0 +1,37 @@
+_id: req_3512401840aa45cc937c319367ec825f
+type: Request
+parentId: fld_d319ff92fe3c4b87b878983ee553e292
+modified: 1690285304394
+created: 1690285284198
+url: "{{generatorUrl}}/v1/simulator/transactions/config"
+name: GEN - TX - SIM - Update simulator configuration
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "enabled": false,
+        "periodSeconds": 5,
+        "transactionCount": 5,
+        "countries": ["CZ","SK"],
+        "countriesPercentDistribution": [50, 50],
+        "services": ["FUEL", "TOLL_BILL", "TOLL_EST", "FEE", "BENEFIT"],
+        "servicesPercentDistribution": [40, 20, 20, 10, 10],
+        "statuses": ["ACCEPTED", "ADJUSTED", "CANCELLED"],
+        "statusesPercentDistribution": [90, 5, 5],
+        "idPrefix": "Marek200723-1510"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285245265
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

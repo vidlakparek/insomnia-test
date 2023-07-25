@@ -1,0 +1,76 @@
+_id: req_bab9a36ee4774b41af7d7a5530c86b3b
+type: Request
+parentId: fld_bc93fe376fce4039bb6b9947be260810
+modified: 1690285480844
+created: 1690285478211
+url: "{{generatorUrl}}/v1/demo/fixedTransactionsPerDay"
+name: GEN - TX - DEMO - client3
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "JB202211082",
+        "productContractNumber": "NBR12345",
+        "upToDate": "2022-11-08",
+        "daysGenerating": 30,
+        "countries": {
+            "SK": {
+                "countryCode": "SK",
+                "currency": "EUR",
+                "fuelVat": 0.20,
+                "fuelPriceMin": 1.7,
+                "fuelPriceMax": 1.9,
+                "fuelLocationSiteNames": [
+                    "SHELL BRATISLAVA-BAJKALSKÁ",
+                    "SHELL BRATISLAVA POPRADSKÁ",
+                    "SHELL PIEŠŤANY-KRAJINSKÁ"
+                ]
+            },
+            "CZ": {
+                "countryCode": "CZ",
+                "currency": "CZK",
+                "fuelVat": 0.21,
+                "fuelPriceMin": 44.60,
+                "fuelPriceMax": 45.90,
+                "fuelLocationSiteNames": [
+                    "SHELL PRAHA VOTICE",
+                    "SHELL ŘÍČANY",
+                    "EUROWAG - KOZOMÍN",
+                    "EUROWAG - MODLETICE"
+                ]
+            }
+        },
+        "cars": [
+            {
+                "licensePlate": "LM 941 DF",
+                "cardNumber": "7896631002962030",
+                "tankCapacity": 250,
+                "fuelLeft": 250,
+                "maxFuelConsumptionPerDay": 90,
+                "obu": "124847"
+            },
+            {
+                "licensePlate": "BA 012 AA",
+                "cardNumber": "5233320343803210",
+                "tankCapacity": 250,
+                "fuelLeft": 250,
+                "maxFuelConsumptionPerDay": 75,
+                "obu": "984461"
+            }
+        ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285282187.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

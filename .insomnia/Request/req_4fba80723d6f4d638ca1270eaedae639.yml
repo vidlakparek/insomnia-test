@@ -1,0 +1,38 @@
+_id: req_4fba80723d6f4d638ca1270eaedae639
+type: Request
+parentId: fld_c367f6a0057f493f91e487887f5e3b05
+modified: 1690285174641
+created: 1690285139991
+url: "{{generatorUrl}}/v2/transactions"
+name: GEN - TX - CREATE - With invoice
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "GEN202306191000000636",
+        "productContractNumber": "GEN202306191000000636ONE1",
+        "countryCode": "DE",
+        "grossAmount": "1000",
+        "currency": "EUR",
+        "transactionDate": "2023-06-15T13:00:39.103",
+        "invoiced": true,
+        "invoiceAttributes":{
+            "issueDate": "2023-06-16",
+            "dueDate":"2023-06-25"
+        }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285030521.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

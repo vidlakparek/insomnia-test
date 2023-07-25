@@ -1,0 +1,31 @@
+_id: req_bb110176372d4719b20194baaae693b4
+type: Request
+parentId: fld_d319ff92fe3c4b87b878983ee553e292
+modified: 1690285371829
+created: 1690285357140
+url: ""
+name: GEN - TX - SIM - Delete ProductContracts
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: |-
+    [
+        {
+            "clientId": "client1",
+            "productContractNumber": "pcn1"
+        }
+    ]
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285245115
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_025906cfcde2479cae44432ede7d4483
+type: Request
+parentId: fld_a88a60a36024458a987a13e355ff54f3
+modified: 1690286768687
+created: 1690286721908
+url: "{{generatorUrl}}/v1/countries/:countryCode/locations/:id"
+name: Delete Toll Gate Pair from Country
+description: ""
+method: DELETE
+body: {}
+parameters:
+  - id: pair_60330b69cdbe4cfdbe8a1bb603dbcbce
+    name: countryCode
+    value: ex
+    description: ""
+  - id: pair_565e7ea1149a476a892a912634a58589
+    name: id
+    value: adipisicing reprehenderit proident
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1690286721908
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

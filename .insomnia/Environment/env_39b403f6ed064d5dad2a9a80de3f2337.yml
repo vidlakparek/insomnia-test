@@ -1,0 +1,30 @@
+_id: env_39b403f6ed064d5dad2a9a80de3f2337
+type: Environment
+parentId: env_86ab734e79df7a17d30e5dfe1ce9d5eaf925ba2a
+modified: 1690286390506
+created: 1690286343675
+name: Azure - EW PPE
+data:
+  clientUrl: http://client.cae-ewallet-nonprod.wag-test.local
+  generatorUrl: http://ewallet-generator.cae-ewallet-nonprod.wag-test.local
+  foreignExchangeUrl: http://foreign-exchange.cae-ewallet-nonprod.wag-test.local
+  accrualUrl: http://accr.cae-ewallet-nonprod.wag-test.local
+  tollBridgeUrl: http://toll-bridge.cae-ewallet-nonprod.wag-test.local
+  depositBridgeUrl: http://deposit-bridge.cae-ewallet-nonprod.wag-test.local
+  feeBridgeUrl: https://fee-bridge.cae-ewallet-nonprod.wag-test.local
+  trafficEvaluatorUrl: http://traffic-evaluator.cae-ewallet-nonprod.wag-test.local
+  invoiceUrl: http://inv.cae-ewallet-nonprod.wag-test.local
+dataPropertyOrder:
+  "&":
+    - clientUrl
+    - generatorUrl
+    - foreignExchangeUrl
+    - accrualUrl
+    - tollBridgeUrl
+    - depositBridgeUrl
+    - feeBridgeUrl
+    - trafficEvaluatorUrl
+    - invoiceUrl
+color: "#09dcce"
+isPrivate: false
+metaSortKey: 1690286343675

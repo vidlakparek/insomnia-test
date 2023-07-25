@@ -1,0 +1,29 @@
+_id: req_e305da87f998414fb70456fe4e2f698a
+type: Request
+parentId: fld_3b07ef44d96f42bfbb96fa5c6fab2712
+modified: 1690286713631
+created: 1690286580706
+url: "{{generatorUrl}}/v1/countries/:countryCode/locations/:id"
+name: Delete Location in Country
+description: ""
+method: DELETE
+body: {}
+parameters:
+  - id: pair_155724ce59d64f07bca70953ac053267
+    name: countryCode
+    value: ex
+    description: required
+  - id: pair_da95cf4db61b440da6574276e4055eae
+    name: id
+    value: adipisicing reprehenderit proident
+    description: required
+headers: []
+authentication: {}
+metaSortKey: -1690286580706
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

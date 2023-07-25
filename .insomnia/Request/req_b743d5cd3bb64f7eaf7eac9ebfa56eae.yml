@@ -1,0 +1,49 @@
+_id: req_b743d5cd3bb64f7eaf7eac9ebfa56eae
+type: Request
+parentId: fld_0bff045dba4340af91b49ef496d73a1c
+modified: 1690285066630
+created: 1690285060222
+url: "{{generatorUrl}}/v1/bootstrap/transactions"
+name: LOCAL GEN - TX - BOOT - All options
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientProductContracts": [
+            {
+                "clientId": "GEN202301311000000002",
+                "productContractNumber": "GEN202301311000000002ONE1"
+            }
+        ],
+        "transactionPrefix": "GEN",
+        "transactionCount": 20,
+        "daysCount": 30,
+        "endDate": "2023-02-01",
+        "minimalCarCount": 3,
+        "countries": ["CZ", "SK", "IT", "HU", "GR"],
+        "countriesPercentDistribution": [25, 25, 20, 20, 10],
+        "services": ["FUEL", "TOLL_BILL", "TOLL_EST", "FEE", "BENEFIT"],
+        "servicesPercentDistribution": [40, 20, 20, 10, 10],
+        "statuses": ["ACCEPTED", "ADJUSTED", "CANCELLED"],
+        "statusesPercentDistribution": [90, 5, 5],
+        "dryRun": false,    
+        "runtimeEnvironment": {
+            "example.instances.count": "1"
+        },
+        "publishProcessingInfoEvents": false
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690284927152.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

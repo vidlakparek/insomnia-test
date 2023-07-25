@@ -1,0 +1,31 @@
+_id: req_eb10e30e81ae4486adfd0c6b3a986050
+type: Request
+parentId: fld_c367f6a0057f493f91e487887f5e3b05
+modified: 1690285183393
+created: 1690285151890
+url: "{{generatorUrl}}/v2/transactions"
+name: GEN - TX - CREATE - Full - grossAmount
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "MP20221216B",
+        "productContractNumber": "MP20221216BONE01",
+        "grossAmount": "1000",
+        "currency": "EUR"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285019226.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

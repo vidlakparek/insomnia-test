@@ -1,0 +1,32 @@
+_id: req_c36cbd520fed47b5be7e3facd3a11272
+type: Request
+parentId: fld_c367f6a0057f493f91e487887f5e3b05
+modified: 1690285189025
+created: 1690285160430
+url: "{{generatorUrl}}/v2/transactions"
+name: GEN - TX - CREATE - Full - unitGrossPrice
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "MP20221216B",
+        "productContractNumber": "MP20221216BONE01",
+        "unitGrossPrice": "2.03",
+        "currency": "EUR",
+        "quantity": "1000"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285013579.4375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
