@@ -1,0 +1,1496 @@
+_id: spc_ca25b29b31714779885238c4f2474cc9
+type: ApiSpec
+parentId: wrk_c119f60ae7844438967dcb98ec9e9f64
+modified: 1690543182692
+created: 1690543182691
+fileName: my-spec.yaml
+contents: >
+  ---
+
+  openapi: 3.0.3
+
+  info:
+    title: ewallet-generator API
+    version: 1.0.0-SNAPSHOT
+  paths:
+    /v1/bootstrap/clients:
+      post:
+        tags:
+        - Bootstrap Client Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BootstrapClientReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/BootstrapClientResp'
+    /v1/bootstrap/transactions:
+      post:
+        tags:
+        - Bootstrap Transaction Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BootstrapTransactionReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/GeneratedData'
+    /v1/countries:
+      get:
+        tags:
+        - Country Resource
+        parameters:
+        - name: withAll
+          in: query
+          schema:
+            type: boolean
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/CountryResp'
+      post:
+        tags:
+        - Country Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateCountryReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/CountryResp'
+    /v1/countries/{countryCode}:
+      get:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/CountryResp'
+      put:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateCountryReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/CountryResp'
+      delete:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/CountryResp'
+    /v1/countries/{countryCode}/locations:
+      get:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/LocationResp'
+      post:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocationReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/LocationResp'
+    /v1/countries/{countryCode}/locations/{id}:
+      get:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/LocationResp'
+      put:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            pattern: \S
+            type: string
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocationReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/LocationResp'
+      delete:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/LocationResp'
+    /v1/countries/{countryCode}/tollGatePairs:
+      get:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/TollGatePairResp'
+      post:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TollGatePairReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/TollGatePairResp'
+    /v1/countries/{countryCode}/tollGatePairs/{id}:
+      get:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/TollGatePairResp'
+      put:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            pattern: \S
+            type: string
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TollGatePairReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/TollGatePairResp'
+      delete:
+        tags:
+        - Country Resource
+        parameters:
+        - name: countryCode
+          in: path
+          required: true
+          schema:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/TollGatePairResp'
+    /v1/demo/fixedTransactionsPerDay:
+      post:
+        tags:
+        - User Simulator Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FixedTransactionsPerDayReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  format: int32
+                  type: integer
+        deprecated: true
+    /v1/demo/rideSimulation:
+      post:
+        tags:
+        - User Simulator Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RideSimulationReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  format: int32
+                  type: integer
+        deprecated: true
+    /v1/simulator/transactions/config:
+      get:
+        tags:
+        - Simulator Config Resource
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/SimulatorConfigResp'
+      put:
+        tags:
+        - Simulator Config Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateSimulatorConfigReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/SimulatorConfigResp'
+    /v1/simulator/transactions/config/productContracts:
+      get:
+        tags:
+        - Simulator Config Resource
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  uniqueItems: true
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/ProductContract'
+      put:
+        tags:
+        - Simulator Config Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                uniqueItems: true
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductContractReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  uniqueItems: true
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/ProductContract'
+      delete:
+        tags:
+        - Simulator Config Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                uniqueItems: true
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductContractReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  uniqueItems: true
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/ProductContract'
+    /v2/transactions:
+      post:
+        tags:
+        - Create Transaction Resource
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTransactionReq'
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/CreateTransactionResp'
+  components:
+    schemas:
+      Article:
+        enum:
+        - DIESEL
+        type: string
+      Article1:
+        enum:
+        - DIESEL
+        type: string
+      BootstrapClientReq:
+        required:
+        - clientIdPrefix
+        - productContractTypes
+        - productContractRiskProfiles
+        - totalCreditLimitMin
+        - totalCreditLimitMax
+        - haulierRevolvingLimitAmountMin
+        - haulierRevolvingLimitAmountMax
+        - haulierRevolvingLimitPeriodDays
+        - resultViews
+        type: object
+        properties:
+          clientIdPrefix:
+            pattern: \S
+            type: string
+          clientCount:
+            format: int32
+            minimum: 0
+            exclusiveMinimum: true
+            type: integer
+          productContractCount:
+            format: int32
+            minimum: 0
+            exclusiveMinimum: true
+            type: integer
+          productContractTypes:
+            minItems: 1
+            type: array
+            items:
+              $ref: '#/components/schemas/ProductContractType'
+          productContractTypePercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          productContractRiskProfiles:
+            minItems: 1
+            type: array
+            items:
+              $ref: '#/components/schemas/RiskProfile'
+          productContractRiskProfilesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          selfVectorAllowed:
+            type: boolean
+          totalCreditLimitMin:
+            minimum: 1
+            type: number
+          totalCreditLimitMax:
+            type: number
+          haulierRevolvingLimitAmountMin:
+            minimum: 1
+            type: number
+          haulierRevolvingLimitAmountMax:
+            maximum: 100
+            type: number
+          haulierRevolvingLimitPeriodDays:
+            minItems: 1
+            uniqueItems: true
+            type: array
+            items:
+              format: int32
+              type: integer
+          dryRun:
+            type: boolean
+          hauliersCreationDelay:
+            $ref: '#/components/schemas/Duration'
+          resultViews:
+            minItems: 1
+            uniqueItems: true
+            type: array
+            items:
+              $ref: '#/components/schemas/ResultView'
+          productContractTypePercentDistributionValid:
+            type: boolean
+          productContractRiskProfilesPercentDistributionValid:
+            type: boolean
+          totalCreditLimitValid:
+            type: boolean
+          haulierRevolvingLimitAmountValid:
+            type: boolean
+          haulierRevolvingLimitPeriodDaysValid:
+            type: boolean
+      BootstrapClientResp:
+        type: object
+      BootstrapTransactionReq:
+        required:
+        - idPrefix
+        - clientProductContracts
+        - transactionDistributionStrategy
+        - countries
+        - services
+        - statuses
+        - invoiceStatuses
+        type: object
+        properties:
+          idPrefix:
+            description: "Prefix for generated IDs (transactionNumber, documentNumber,\
+              \ ...). E.g. 'PERF01'_XXX followed by the transaction number separated\
+              \ by an underscore."
+            pattern: \S
+            type: string
+          clientProductContracts:
+            minItems: 1
+            type: array
+            items:
+              $ref: '#/components/schemas/ClientProductContract'
+          transactionCount:
+            format: int32
+            minimum: 0
+            type: integer
+          transactionDistributionStrategy:
+            $ref: '#/components/schemas/DistributionStrategy'
+          daysCount:
+            format: int32
+            minimum: -1
+            type: integer
+          endDate:
+            $ref: '#/components/schemas/LocalDate'
+          minimalCarCount:
+            format: int32
+            minimum: 0
+            exclusiveMinimum: true
+            type: integer
+          countries:
+            minItems: 1
+            type: array
+            items:
+              $ref: '#/components/schemas/Country'
+          countriesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          services:
+            minItems: 1
+            type: array
+            items:
+              $ref: '#/components/schemas/Service'
+          servicesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          statuses:
+            minItems: 1
+            type: array
+            items:
+              $ref: '#/components/schemas/Status'
+          statusesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          invoicedServicesPercentage:
+            type: object
+            additionalProperties:
+              format: int32
+              type: integer
+          invoicedTransactionCreationDelay:
+            $ref: '#/components/schemas/Duration'
+          invoiceStatuses:
+            minItems: 1
+            type: array
+            items:
+              $ref: '#/components/schemas/InvoiceStatus'
+          invoiceStatusesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          dryRun:
+            type: boolean
+          runtimeEnvironment:
+            type: object
+            additionalProperties:
+              type: string
+          publishProcessingInfoEvents:
+            type: boolean
+          countriesPercentDistributionValid:
+            type: boolean
+          servicesPercentDistributionValid:
+            type: boolean
+          statusesValid:
+            type: boolean
+          statusesPercentDistributionValid:
+            type: boolean
+          invoicedServicesPercentageValid:
+            type: boolean
+          invoiceStatusesPercentDistributionValid:
+            type: boolean
+      Car:
+        type: object
+        properties:
+          licensePlate:
+            type: string
+          cardNumber:
+            type: string
+          obu:
+            type: string
+      ClientProductContract:
+        required:
+        - clientId
+        - productContractNumber
+        type: object
+        properties:
+          clientId:
+            pattern: \S
+            type: string
+          productContractNumber:
+            pattern: \S
+            type: string
+      Country:
+        enum:
+        - CZ
+        - SK
+        - HU
+        - PL
+        - IT
+        - DE
+        - AT
+        - GR
+        type: string
+      CountryDefinition:
+        type: object
+        properties:
+          countryCode:
+            $ref: '#/components/schemas/Country'
+          currency:
+            $ref: '#/components/schemas/Currency'
+          fuelVat:
+            type: number
+          fuelPriceMin:
+            type: number
+          fuelPriceMax:
+            type: number
+          fuelLocationSiteNames:
+            type: array
+            items:
+              type: string
+          tollVat:
+            type: number
+          tollPricePerKm:
+            type: number
+          tollGates:
+            type: array
+            items:
+              type: string
+      CountryResp:
+        type: object
+        properties:
+          countryCode:
+            type: string
+          currency:
+            type: string
+          vatRate:
+            type: number
+          unitGrossPrice:
+            $ref: '#/components/schemas/Range'
+          tollGrossPricePerKm:
+            type: number
+          tollVatRate:
+            type: number
+          locations:
+            type: array
+            items:
+              $ref: '#/components/schemas/Location'
+          tollGatePairs:
+            type: array
+            items:
+              $ref: '#/components/schemas/TollGatePair'
+      CreateCountryReq:
+        required:
+        - countryCode
+        - currency
+        - unitGrossPrice
+        - tollGrossPricePerKm
+        - tollVatRate
+        type: object
+        properties:
+          countryCode:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+          currency:
+            description: Base currency for the country.
+            pattern: "[a-zA-Z]{3}"
+            type: string
+          vatRate:
+            maximum: 30
+            minimum: 0
+            type: number
+          unitGrossPrice:
+            $ref: '#/components/schemas/Range'
+          tollGrossPricePerKm:
+            minimum: 0
+            type: number
+          tollVatRate:
+            minimum: 0
+            type: number
+      CreateTransactionReq:
+        required:
+        - clientId
+        - productContractNumber
+        type: object
+        properties:
+          transactionDate:
+            $ref: '#/components/schemas/LocalDateTime'
+          serviceCategory:
+            $ref: '#/components/schemas/ServiceCategory1'
+          article:
+            $ref: '#/components/schemas/Article1'
+          clientId:
+            pattern: \S
+            type: string
+          productContractNumber:
+            pattern: \S
+            type: string
+          licensePlate:
+            type: string
+          cardNumber:
+            type: string
+          countryCode:
+            description: Country code by ISO 3166-2 (Alpha-2 code).
+            pattern: "[a-zA-Z]{2}"
+            type: string
+          siteName:
+            type: string
+          currency:
+            description: Currency code by ISO 4217 (Alpha-3 code).
+            pattern: "[a-zA-Z]{3}"
+            type: string
+          vatRate:
+            maximum: 30
+            minimum: 0
+            type: number
+          quantity:
+            minimum: 0
+            exclusiveMinimum: true
+            type: number
+          unitGrossPrice:
+            description: With VAT
+            minimum: 0
+            exclusiveMinimum: true
+            type: number
+          grossAmount:
+            description: With VAT
+            minimum: 0
+            exclusiveMinimum: true
+            type: number
+          invoiced:
+            type: boolean
+          invoiceAttributes:
+            $ref: '#/components/schemas/InvoiceAttributes1'
+      CreateTransactionResp:
+        type: object
+        properties:
+          productContractNumber:
+            type: string
+          unitGrossPrice:
+            type: number
+          clientId:
+            type: string
+          quantity:
+            type: number
+          netAmount:
+            type: number
+          transactionNumber:
+            type: string
+          vatRate:
+            type: number
+          unitNetPrice:
+            type: number
+          siteName:
+            type: string
+          grossAmount:
+            type: number
+          transactionDate:
+            $ref: '#/components/schemas/LocalDateTime'
+          type:
+            type: string
+          serviceCategory:
+            $ref: '#/components/schemas/ServiceCategory'
+          article:
+            $ref: '#/components/schemas/Article'
+          vatAmount:
+            type: number
+          licensePlate:
+            type: string
+          countryCode:
+            type: string
+          invoiceNumber:
+            type: string
+          currency:
+            type: string
+          cardNumber:
+            type: string
+          status:
+            $ref: '#/components/schemas/Status'
+      Currency:
+        enum:
+        - EUR
+        - CZK
+        - HUF
+        - BYN
+        - BGN
+        - HRK
+        - DKK
+        - GBP
+        - NOK
+        - PLN
+        - RON
+        - SEK
+        - CHE
+        - TRY
+        - UAH
+        - ILS
+        - RUB
+        type: string
+      DepositTransaction:
+        type: object
+        properties:
+          trxNbr:
+            type: string
+          clientId:
+            type: string
+          productContractNbr:
+            type: string
+          amount:
+            type: number
+          transactionDate:
+            $ref: '#/components/schemas/OffsetDateTime'
+          currency:
+            type: string
+          invoiceNumber:
+            type: string
+      DistributionStrategy:
+        enum:
+        - RANDOM
+        - FIXED
+        type: string
+      Duration:
+        format: duration
+        type: string
+        example: P1D
+      FeeTransactionAttributes:
+        type: object
+        properties:
+          transactionNumber:
+            type: string
+          transactionDate:
+            $ref: '#/components/schemas/LocalDateTime'
+          transactionType:
+            $ref: '#/components/schemas/TransactionType'
+          clientId:
+            type: string
+          productContractNumber:
+            type: string
+          countryCode:
+            type: string
+          grossAmount:
+            type: number
+          currency:
+            type: string
+          netAmount:
+            type: number
+          vatAmount:
+            type: number
+          vatRate:
+            type: number
+          status:
+            $ref: '#/components/schemas/Status'
+          type:
+            type: string
+      FixedTransactionsPerDayReq:
+        required:
+        - clientId
+        - productContractNumber
+        type: object
+        properties:
+          clientId:
+            pattern: \S
+            type: string
+          productContractNumber:
+            pattern: \S
+            type: string
+          upToDateIncluded:
+            $ref: '#/components/schemas/LocalDate'
+          daysGenerating:
+            format: int32
+            type: integer
+          transactionsPerDay:
+            format: int32
+            type: integer
+          consumptionMin:
+            type: number
+          consumptionMax:
+            type: number
+          countries:
+            type: object
+            additionalProperties:
+              $ref: '#/components/schemas/CountryDefinition'
+          cars:
+            type: array
+            items:
+              $ref: '#/components/schemas/Car'
+      FuelTransactionAttributes:
+        type: object
+        properties:
+          transactionNumber:
+            type: string
+          transactionDate:
+            $ref: '#/components/schemas/LocalDateTime'
+          serviceCategory:
+            $ref: '#/components/schemas/ServiceCategory'
+          clientId:
+            type: string
+          productContractNumber:
+            type: string
+          countryCode:
+            type: string
+          grossAmount:
+            type: number
+          currency:
+            type: string
+          article:
+            $ref: '#/components/schemas/Article'
+          licensePlate:
+            type: string
+          cardNumber:
+            type: string
+          siteName:
+            type: string
+          vatRate:
+            type: number
+          quantity:
+            type: number
+          unitGrossPrice:
+            type: number
+          unitNetPrice:
+            type: number
+          vatAmount:
+            type: number
+          netAmount:
+            type: number
+          invoiceNumber:
+            type: string
+          status:
+            $ref: '#/components/schemas/Status'
+          type:
+            type: string
+      GeneratedData:
+        type: object
+        properties:
+          fuelTransactionAttributes:
+            type: array
+            items:
+              $ref: '#/components/schemas/FuelTransactionAttributes'
+          tollTransactionAttributes:
+            type: array
+            items:
+              $ref: '#/components/schemas/TollTransactionAttributes'
+          feeTransactionAttributes:
+            type: array
+            items:
+              $ref: '#/components/schemas/FeeTransactionAttributes'
+          benefitTransactionAttributes:
+            type: array
+            items:
+              $ref: '#/components/schemas/FeeTransactionAttributes'
+          depositTransactions:
+            type: array
+            items:
+              $ref: '#/components/schemas/DepositTransaction'
+          invoices:
+            type: array
+            items:
+              $ref: '#/components/schemas/InvoiceAttributes'
+      InvoiceAttributes:
+        type: object
+        properties:
+          documentNumber:
+            type: string
+          clientId:
+            type: string
+          productContractNumber:
+            type: string
+          issueDate:
+            $ref: '#/components/schemas/LocalDate'
+          dateOfSupply:
+            $ref: '#/components/schemas/LocalDate'
+          dueDate:
+            $ref: '#/components/schemas/LocalDate'
+          countryCode:
+            type: string
+          invoicedGrossAmount:
+            type: number
+          invoicedVatAmount:
+            type: number
+          invoicedNetAmount:
+            type: number
+          currencyCode:
+            type: string
+      InvoiceAttributes1:
+        required:
+        - issueDate
+        - dueDate
+        type: object
+        properties:
+          issueDate:
+            $ref: '#/components/schemas/LocalDate'
+          dueDate:
+            $ref: '#/components/schemas/LocalDate'
+      InvoiceStatus:
+        enum:
+        - PAID
+        - UNPAID
+        type: string
+      LocalDate:
+        format: date
+        type: string
+        example: 2022-03-10
+      LocalDateTime:
+        format: date-time
+        type: string
+        example: 2022-03-10T12:15:50
+      Location:
+        type: object
+        properties:
+          id:
+            type: string
+          siteName:
+            type: string
+      LocationReq:
+        required:
+        - siteName
+        type: object
+        properties:
+          siteName:
+            pattern: \S
+            type: string
+      LocationResp:
+        type: object
+        properties:
+          id:
+            type: string
+          siteName:
+            type: string
+      OffsetDateTime:
+        format: date-time
+        type: string
+        example: 2022-03-10T12:15:50-04:00
+      ProductContract:
+        type: object
+        properties:
+          clientId:
+            type: string
+          productContractNumber:
+            type: string
+      ProductContractReq:
+        required:
+        - clientId
+        - productContractNumber
+        type: object
+        properties:
+          clientId:
+            pattern: \S
+            type: string
+          productContractNumber:
+            pattern: \S
+            type: string
+      ProductContractType:
+        enum:
+        - ONE
+        - VECTOR_FORWARDER
+        - VECTOR_HAULIER
+        type: string
+      Range:
+        type: object
+        properties:
+          min:
+            type: number
+          max:
+            type: number
+      ResultView:
+        enum:
+        - TRANSACTIONS_API_INPUT
+        - TREE_SHORT
+        - TREE_FULL
+        - STATISTICS
+        type: string
+      RideSimulationReq:
+        required:
+        - clientId
+        - productContractNumber
+        type: object
+        properties:
+          clientId:
+            pattern: \S
+            type: string
+          productContractNumber:
+            pattern: \S
+            type: string
+          upToDate:
+            $ref: '#/components/schemas/LocalDate'
+          daysGenerating:
+            format: int32
+            type: integer
+          countries:
+            type: object
+            additionalProperties:
+              $ref: '#/components/schemas/CountryDefinition'
+          cars:
+            type: array
+            items:
+              $ref: '#/components/schemas/SimulationCar'
+      RiskProfile:
+        enum:
+        - A
+        - B
+        type: string
+      Service:
+        enum:
+        - FUEL
+        - TOLL_BILL
+        - TOLL_EST
+        - FEE
+        - BENEFIT
+        type: string
+      ServiceCategory:
+        enum:
+        - FUEL
+        type: string
+      ServiceCategory1:
+        enum:
+        - FUEL
+        type: string
+      SimulationCar:
+        type: object
+        properties:
+          licensePlate:
+            type: string
+          cardNumber:
+            type: string
+          obu:
+            type: string
+          tankCapacity:
+            format: int32
+            type: integer
+          fuelLeft:
+            format: int32
+            type: integer
+          maxFuelConsumptionPerDay:
+            format: int32
+            type: integer
+      SimulatorConfigResp:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+          periodSeconds:
+            format: int32
+            type: integer
+          transactionCount:
+            format: int32
+            type: integer
+          countries:
+            type: array
+            items:
+              $ref: '#/components/schemas/Country'
+          countriesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          services:
+            type: array
+            items:
+              $ref: '#/components/schemas/Service'
+          servicesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          statuses:
+            type: array
+            items:
+              $ref: '#/components/schemas/Status'
+          statusesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+          idPrefix:
+            type: string
+      Status:
+        enum:
+        - ACCEPTED
+        - ADJUSTED
+        - CANCELLED
+        - INVOICED
+        type: string
+      TollGatePair:
+        type: object
+        properties:
+          id:
+            type: string
+          entryGateName:
+            type: string
+          exitGateName:
+            type: string
+          distanceKm:
+            type: number
+      TollGatePairReq:
+        required:
+        - entryGateName
+        - exitGateName
+        - distanceKm
+        type: object
+        properties:
+          entryGateName:
+            pattern: \S
+            type: string
+          exitGateName:
+            pattern: \S
+            type: string
+          distanceKm:
+            minimum: 0
+            exclusiveMinimum: true
+            type: number
+      TollGatePairResp:
+        type: object
+        properties:
+          id:
+            type: string
+          entryGateName:
+            type: string
+          exitGateName:
+            type: string
+          distanceKm:
+            type: number
+      TollTransactionAttributes:
+        type: object
+        properties:
+          transactionNumber:
+            type: string
+          transactionDate:
+            $ref: '#/components/schemas/LocalDateTime'
+          transactionType:
+            $ref: '#/components/schemas/TransactionType1'
+          clientId:
+            type: string
+          productContractNumber:
+            type: string
+          countryCode:
+            type: string
+          grossAmount:
+            type: number
+          currency:
+            type: string
+          licensePlate:
+            type: string
+          cardNumber:
+            type: string
+          obu:
+            type: string
+          entryGate:
+            type: string
+          exitGate:
+            type: string
+          netAmount:
+            type: number
+          vatAmount:
+            type: number
+          vatRate:
+            type: number
+          status:
+            $ref: '#/components/schemas/Status'
+          type:
+            type: string
+      TransactionType:
+        enum:
+        - BILL
+        type: string
+      TransactionType1:
+        enum:
+        - BILL
+        - EST
+        type: string
+      UpdateCountryReq:
+        required:
+        - currency
+        - unitGrossPrice
+        - tollGrossPricePerKm
+        - tollVatRate
+        type: object
+        properties:
+          currency:
+            description: Base currency for the country.
+            pattern: "[a-zA-Z]{3}"
+            type: string
+          vatRate:
+            maximum: 30
+            minimum: 0
+            type: number
+          unitGrossPrice:
+            $ref: '#/components/schemas/Range'
+          tollGrossPricePerKm:
+            minimum: 0
+            type: number
+          tollVatRate:
+            minimum: 0
+            type: number
+      UpdateSimulatorConfigReq:
+        type: object
+        properties:
+          enabled:
+            type: boolean
+            nullable: true
+          periodSeconds:
+            format: int32
+            type: integer
+            nullable: true
+          transactionCount:
+            format: int32
+            type: integer
+            nullable: true
+          countries:
+            type: array
+            items:
+              $ref: '#/components/schemas/Country'
+            nullable: true
+          countriesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+            nullable: true
+          services:
+            type: array
+            items:
+              $ref: '#/components/schemas/Service'
+            nullable: true
+          servicesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+            nullable: true
+          statuses:
+            type: array
+            items:
+              $ref: '#/components/schemas/Status'
+            nullable: true
+          statusesPercentDistribution:
+            type: array
+            items:
+              format: int32
+              type: integer
+            nullable: true
+          idPrefix:
+            type: string
+            nullable: true
+    securitySchemes:
+      SecurityScheme:
+        type: http
+        description: Authentication
+        scheme: basic
+contentType: yaml

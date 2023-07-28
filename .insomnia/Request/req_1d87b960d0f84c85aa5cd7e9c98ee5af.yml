@@ -1,0 +1,29 @@
+_id: req_1d87b960d0f84c85aa5cd7e9c98ee5af
+type: Request
+parentId: fld_112075f5bdf0449aa94d8fc17e88c870
+modified: 1690540905244
+created: 1690540884255
+url: "{{limitBridgeUrl???}}/v1/limitbr//revolving-limit"
+name: Change Limit
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        //TBD limit-bridge is not deployed on DEV!!
+        //Command is send to PEX directly now
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690540884255
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

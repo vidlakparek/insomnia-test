@@ -1,0 +1,21 @@
+_id: req_79875e083b22430baec23a3e4e73adbe
+type: Request
+parentId: fld_f0ca3c90a5f44df9803cfc1ccc48c192
+modified: 1690536181862
+created: 1690536167003
+url: "{{accrualUrl}}/v1/accr/MP20220812"
+name: ACCR - dailyAccrualPerClient
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1690536149154
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_b306f4993cfa430dafa1a137dd1b1082
+type: Request
+parentId: fld_dc39088ada5f4e6ba98b975c22097fdf
+modified: 1690285322209
+created: 1690285309280
+url: "{{generatorUrl}}/v1/simulator/transactions/config/productContracts"
+name: GEN - TX - SIM - Get ProductContracts
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1690285245215
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

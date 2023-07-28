@@ -1,0 +1,31 @@
+_id: req_a07b2c08692a4e1dac0768977d54be53
+type: Request
+parentId: fld_a126695368ba477e9576e1372e5250bb
+modified: 1690535907260
+created: 1690535890220
+url: "{{clientUrl}}/v2/clients/MP200/contracts/vector/forwarder"
+name: Create VECTOR (forwarder)
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "productContractNumber": "MP200F01",
+      "name": "SOMEONE",
+      "mainCurrency": "EUR",
+      "totalCreditLimit": 100.50
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690535870078
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

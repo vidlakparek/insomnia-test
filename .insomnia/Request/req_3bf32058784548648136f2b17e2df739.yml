@@ -1,0 +1,34 @@
+_id: req_3bf32058784548648136f2b17e2df739
+type: Request
+parentId: fld_6e0bcf0344204b02ae9ba6f1acb1d32f
+modified: 1690286861153
+created: 1690286828776
+url: "{{generatorUrl}}/v1/countries/:countryCode/tollGatePairs"
+name: Add Toll Gate Pair to Country
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "entryGateName": "Liptovský Mikuláš",
+      "exitGateName": "Králiky",
+      "distanceKm": 71.34
+    }
+parameters:
+  - id: pair_24811d0cda2e4fe48643855cceca14dd
+    name: countryCode
+    value: SK
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690286828776
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

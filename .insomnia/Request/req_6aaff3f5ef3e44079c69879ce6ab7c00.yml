@@ -1,0 +1,29 @@
+_id: req_6aaff3f5ef3e44079c69879ce6ab7c00
+type: Request
+parentId: fld_2f8b2af5bf8f4c2b86c07d7ef914fd87
+modified: 1690535838762
+created: 1690535737225
+url: "{{clientUrl}}/v2/clients"
+name: Create client
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "MP200",
+        "name": "Client {{$guid}}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690535737225
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

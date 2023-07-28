@@ -1,0 +1,36 @@
+_id: req_54ba902f17d8477aaa20c96e47cf585f
+type: Request
+parentId: fld_beab026d726d4ffcac74e50e5a007d0a
+modified: 1690286709982
+created: 1690286638997
+url: "{{generatorUrl}}/v1/countries/:countryCode/locations/:id"
+name: Update Location in Country
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "siteName": "L"
+    }
+parameters:
+  - id: pair_b5aa15efdf344f5584915de782ffa3e7
+    name: countryCode
+    value: ex
+    description: ""
+  - id: pair_d5a689bb96b84710983fe0b0a62b3607
+    name: id
+    value: Z
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690286638997
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

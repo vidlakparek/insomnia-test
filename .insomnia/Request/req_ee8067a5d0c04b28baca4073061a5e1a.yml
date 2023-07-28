@@ -1,0 +1,40 @@
+_id: req_ee8067a5d0c04b28baca4073061a5e1a
+type: Request
+parentId: fld_03aa75d5442948d486e901607430fe7f
+modified: 1690541192578
+created: 1690541183735
+url: "{{generatorUrl}}/v2/transactions"
+name: 3. Invoice with amounth XZ (same with client 1)
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+
+        "clientId": "DT02202306221000000678",
+        "productContractNumber": "DT02202306221000000678ONE1",
+        "countryCode": "DE",
+        "grossAmount": "1000",
+        "currency": "EUR",
+        "transactionDate": "2023-06-15T13:00:39.103",
+        "dryRun": false,
+        "invoiced": true,
+        "invoiceAttributes":{
+            "issueDate": "2023-06-16",
+            "dueDate":"2023-06-25"
+        }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690541183735
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

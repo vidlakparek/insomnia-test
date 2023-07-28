@@ -1,0 +1,29 @@
+_id: req_7966cf4f107a43b08127cecedc365880
+type: Request
+parentId: fld_beab026d726d4ffcac74e50e5a007d0a
+modified: 1690286705364
+created: 1690286679448
+url: "{{generatorUrl}}/v1/countries/:countryCode/locations/:id"
+name: Get Location for Country
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_9e7f6be159604ccfac18ddc1a6f3b43d
+    name: countryCode
+    value: ex
+    description: ""
+  - id: pair_f89a9a85b42949c59007d029d9f73e68
+    name: id
+    value: adipisicing reprehenderit proident
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1690286679448
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

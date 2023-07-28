@@ -1,0 +1,29 @@
+_id: req_494b780593374ead80f41a84cec721a1
+type: Request
+parentId: fld_6e0bcf0344204b02ae9ba6f1acb1d32f
+modified: 1690286965747
+created: 1690286941755
+url: "{{generatorUrl}}/v1/countries/:countryCode/tollGatePairs/:id"
+name: Get Toll Gate Pair for Country
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_8a2837f8888a4067972b2238bc433649
+    name: countryCode
+    value: ex
+    description: ""
+  - id: pair_3a3f2880120e44499ddc9bb2ffc4fbda
+    name: id
+    value: adipisicing reprehenderit proident
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1690286941755
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

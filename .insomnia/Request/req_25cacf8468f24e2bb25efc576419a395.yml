@@ -1,0 +1,21 @@
+_id: req_25cacf8468f24e2bb25efc576419a395
+type: Request
+parentId: fld_00ed99f38a304655a697bf27d4aa0ea7
+modified: 1690541243894
+created: 1690536023906
+url: "{{trafficEvaluatorUrl}}/performance-test/results/PERFMP01"
+name: "[TREV] Get Results"
+description: ""
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1690536023906
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

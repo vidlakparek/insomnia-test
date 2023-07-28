@@ -1,0 +1,55 @@
+_id: req_cb5ff88961b04808a136e64cba795b98
+type: Request
+parentId: fld_25b5841825d842b784f5c2485030602b
+modified: 1690285025587
+created: 1690285007932
+url: "{{generatorUrl}}/v1/bootstrap/transactions"
+name: GEN - TX - BOOT - All options
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientProductContracts": [
+             {
+                "clientId": "GEN202307201000000754",
+                "productContractNumber": "GEN202307201000000754ONE1"
+            }
+        ],
+        "idPrefix": "PERFMarek200723",
+        "transactionCount": 10,
+        "daysCount": 30,
+        "endDate": "2023-02-01",
+        "minimalCarCount": 3,
+        "countries": ["CZ", "SK", "IT", "HU", "GR"],
+        "countriesPercentDistribution": [25, 25, 20, 20, 10],
+        "services": ["FUEL", "TOLL_BILL", "TOLL_EST", "FEE", "BENEFIT"],
+        "servicesPercentDistribution": [40, 20, 20, 10, 10],
+        "statuses": ["ACCEPTED", "ADJUSTED", "CANCELLED"],
+        "statusesPercentDistribution": [90, 5, 5],
+        "invoicedServicesPercentage": {
+           "FUEL": 50
+        },
+        "invoicedTransactionCreationDelay": "PT0s",
+        "invoiceStatuses": ["PAID", "UNPAID"],
+        "invoiceStatusesPercentDistribution": [50, 50],
+        "dryRun": false,
+        "runtimeEnvironment": {
+            "example.instances.count": "1"
+        },
+        "publishProcessingInfoEvents": true
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285007932
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_7dad1520f1d64207b759b64fa0e75678
+type: Request
+parentId: fld_78a4005d54ec442bbaa558167ab2dd0f
+modified: 1690285169642
+created: 1690285122831
+url: "{{generatorUrl}}/v2/transactions"
+name: GEN - TX - CREATE - Full - transactionDate
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "MP20221216B",
+        "productContractNumber": "MP20221216BONE01",
+        "transactionDate": "2022-12-16T13:00:39.103"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285053111.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

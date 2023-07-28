@@ -1,0 +1,38 @@
+_id: req_4d7edf5c34cd49ec92b3cbd9a3ba1cfb
+type: Request
+parentId: fld_03aa75d5442948d486e901607430fe7f
+modified: 1690541207246
+created: 1690541198736
+url: "{{generatorUrl}}/v1/bootstrap/clients"
+name: 1. credit lmit 90000 EUR, risk profile B
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientIdPrefix": "DT02",
+        "clientCount": 1,
+        "productContractCount": 1,
+        "productContractTypes": ["ONE"],
+        "productContractTypePercentDistribution": [100],
+        "productContractRiskProfiles": ["B"],
+        "productContractRiskProfilesPercentDistribution": [100],
+        "totalCreditLimitMin": 90000,
+        "totalCreditLimitMax": 90000,
+        "dryRun": true,
+        "resultViews": ["TRANSACTIONS_API_INPUT", "TREE_FULL", "STATISTICS"]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690541198736
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

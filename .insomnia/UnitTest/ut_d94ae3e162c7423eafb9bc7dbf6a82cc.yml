@@ -1,0 +1,12 @@
+_id: ut_d94ae3e162c7423eafb9bc7dbf6a82cc
+type: UnitTest
+parentId: uts_3ec8c09669b24d378d13ae5709da19a9
+modified: 1690319321183
+created: 1690272348361
+requestId: req_6f22bea54a7d4b54b1b8978f6ca68a17
+name: New Test
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);
+  const body = JSON.parse(response1.data);
+  expect(body).to.have.property('enabled').that.equals(false);

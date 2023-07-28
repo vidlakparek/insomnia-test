@@ -1,0 +1,32 @@
+_id: req_45efdb56182f48c3b46c41c887af6947
+type: Request
+parentId: fld_5d04fba36f884770a0d668bcf0286d91
+modified: 1690541102475
+created: 1690541092215
+url: "{{generatorUrl}}/v2/transactions"
+name: 4. transaction to change balance (grossAmount)
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "DT01202306221000000677",
+        "productContractNumber": "DT01202306221000000677ONE1",
+        "grossAmount": "500",
+        "currency": "EUR",
+        "dryRun": false
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690541092215
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

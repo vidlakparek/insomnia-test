@@ -1,0 +1,31 @@
+_id: req_3f0beb87009b4578ac2ce137cb1c801d
+type: Request
+parentId: fld_a126695368ba477e9576e1372e5250bb
+modified: 1690535881194
+created: 1690535870128
+url: "{{clientUrl}}/v2/clients/MP200/contracts/one"
+name: Create ONE
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "productContractNumber": "MP200ONE01",
+      "name": "SOMEONE",
+      "mainCurrency": "EUR",
+      "totalCreditLimit": 100.50
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690535870128
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

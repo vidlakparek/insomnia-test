@@ -1,0 +1,21 @@
+_id: req_6f22bea54a7d4b54b1b8978f6ca68a17
+type: Request
+parentId: fld_dc39088ada5f4e6ba98b975c22097fdf
+modified: 1690285277171
+created: 1690285245315
+url: "{{generatorUrl}}/v1/simulator/transactions/config"
+name: GEN - TX - SIM - Get simulator config
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1690285245315
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

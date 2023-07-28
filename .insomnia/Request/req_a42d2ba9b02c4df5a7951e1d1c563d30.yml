@@ -1,0 +1,28 @@
+_id: req_a42d2ba9b02c4df5a7951e1d1c563d30
+type: Request
+parentId: fld_a5a0d47fdfcd49e6b1a0a9c90ef25844
+modified: 1690540792682
+created: 1690540787763
+url: https://ewalletdev2export.blob.core.windows.net/test-container/machine-readable-business-employment-data-june-2022-quarter.csv
+name: Blob storage
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: Authorization
+    value: SharedKey
+      ewalletdev2export:v6KGP+ac2Gw4L1vy2K3isi6KGk3zbH4Q3/XBkCUcmi9+tpmYiwopovQOVYkhzZdbt5osrznID4Hr+AStpaq0hg==
+  - name: x-ms-date
+    value: Fri, 14 Sep 2022 18:04:53 GMT
+  - name: nx-ms-version
+    value: 2022-10-14
+headers: []
+authentication: {}
+metaSortKey: -1690540787763
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

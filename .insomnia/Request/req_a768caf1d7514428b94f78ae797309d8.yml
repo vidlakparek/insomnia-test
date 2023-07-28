@@ -1,0 +1,32 @@
+_id: req_a768caf1d7514428b94f78ae797309d8
+type: Request
+parentId: fld_beab026d726d4ffcac74e50e5a007d0a
+modified: 1690286632420
+created: 1690286452678
+url: "{{generatorUrl}}/v1/countries/:countryCode/locations"
+name: Add Location to Country
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "siteName": "Strakonická 3244"
+    }
+parameters:
+  - id: pair_d3bbed74307c495db54ce6f515b30752
+    name: countryCode
+    value: CZ
+    description: required
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690286452678
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

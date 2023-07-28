@@ -1,0 +1,30 @@
+_id: req_ee05fae3969545a19439f3e0c87242e5
+type: Request
+parentId: fld_2981cccc506043408469e04fbeb65169
+modified: 1690285612245
+created: 1690285540143
+url: "{{generatorUrl}}/v1/countries"
+name: Get Country with/without Locations
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters:
+  - id: pair_3699079c675240c9a45e8b2562a057c8
+    name: withAll
+    value: "true"
+    description: ""
+    disabled: false
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285540143
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

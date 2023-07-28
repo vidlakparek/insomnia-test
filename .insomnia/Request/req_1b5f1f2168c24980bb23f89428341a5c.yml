@@ -1,0 +1,49 @@
+_id: req_1b5f1f2168c24980bb23f89428341a5c
+type: Request
+parentId: fld_5d04fba36f884770a0d668bcf0286d91
+modified: 1690541151722
+created: 1690541141882
+url: "{{generatorUrl}}/v1/bootstrap/transactions"
+name: 2a. transactions 1st BC 1.6 - 14.6., AT, 60 Trx, DD 28.6.
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientProductContracts": [
+            {
+                "clientId": "DT01202306221000000677",
+                "productContractNumber": "DT01202306221000000677ONE1"
+            }
+        ],
+        "idPrefix": "DT01",
+        "transactionCount": 10,
+        "daysCount": 13,
+        "endDate": "2023-06-14",
+        "minimalCarCount": 5,
+        "countries": ["AT"],
+        "countriesPercentDistribution": [100],
+        "services": ["FUEL", "TOLL_BILL", "TOLL_EST"],
+        "servicesPercentDistribution": [60, 20, 20],
+        "statuses": ["ACCEPTED"],
+        "statusesPercentDistribution": [100],
+        "deposits": [],
+        "invoicedServicesPercentage": {
+           "FUEL": 100
+        },
+        "dryRun": false
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690541141882
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

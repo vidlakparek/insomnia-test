@@ -1,0 +1,39 @@
+_id: req_5231cea11e3c412d9756529d70cd73ad
+type: Request
+parentId: fld_e87ef0759c9043f793b042fcae307e5a
+modified: 1690284848394
+created: 1690284767132
+url: "{{generatorUrl}}/v1/bootstrap/clients"
+name: GEN - CLI - BOOT - B4F Demo Client
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientCount": 1,
+        "productContractCount": 4,
+        "productContractTypes": ["ONE", "VECTOR_FORWARDER", "VECTOR_HAULIER"],
+        "productContractTypePercentDistribution": [25, 25, 50],
+        "selfVectorAllowed": true,
+        "totalCreditLimitMin": 5000,
+        "totalCreditLimitMax": 500000,
+        "haulierRevolvingLimitAmountMin": 10,
+        "haulierRevolvingLimitAmountMax": 100,
+        "haulierRevolvingLimitPeriodDays": [5, 7],
+        "hauliersCreationDelay": "PT2s",
+        "resultViews": ["TRANSACTIONS_API_INPUT", "TREE_FULL", "STATISTICS"]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690284767132
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

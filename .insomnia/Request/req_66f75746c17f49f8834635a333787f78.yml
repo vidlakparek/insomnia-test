@@ -1,0 +1,29 @@
+_id: req_66f75746c17f49f8834635a333787f78
+type: Request
+parentId: fld_78a4005d54ec442bbaa558167ab2dd0f
+modified: 1690285165466
+created: 1690285098291
+url: "{{generatorUrl}}/v2/transactions"
+name: GEN - TX - CREATE - clientId
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientId": "JB202211082",
+        "productContractNumber": "NBR12345"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690285098291
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

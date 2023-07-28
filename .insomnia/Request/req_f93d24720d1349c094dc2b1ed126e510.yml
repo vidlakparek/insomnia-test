@@ -1,0 +1,37 @@
+_id: req_f93d24720d1349c094dc2b1ed126e510
+type: Request
+parentId: fld_f6ee720c119c491c992922c5c8f6d3c2
+modified: 1690536072060
+created: 1690536062056
+url: "{{foreignExchangeUrl}}/v2/convert"
+name: Convert v2
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "fromCurrency": "CZK",
+      "toCurrency": "EUR",
+      "conversionDateTime": "2022-05-09T06:21:49Z",
+      "conversionType": "BUY",
+      "rateType": "EW",
+      "clientId": "JaPex007",
+      "fromAmounts": {
+        "firstAmount": 112,
+        "secondAmount": 300.99
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690536043336
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

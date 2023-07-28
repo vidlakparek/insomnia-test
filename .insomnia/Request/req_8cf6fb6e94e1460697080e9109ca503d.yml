@@ -1,0 +1,47 @@
+_id: req_8cf6fb6e94e1460697080e9109ca503d
+type: Request
+parentId: fld_2981cccc506043408469e04fbeb65169
+modified: 1690286078933
+created: 1690285675548
+url: "{{generatorUrl}}/v1/countries/:countryCode"
+name: Update Country
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "countryCode": "SK",
+        "currency": "EUR",
+        "vatRate": 19,
+        "unitGrossPrice": {
+            "min": 2.4,
+            "max": 4.5
+        },
+        "tollGrossPricePerKm": 0.18,
+        "tollVatRate": 0
+    }
+parameters:
+  - id: pair_00e34c4b6dfe49afaec8619f93272f79
+    name: countryCode
+    value: SK
+    description: ""
+    type: text
+    multiline: false
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_29c6e4867b5944faba0d8bfbe5d9754b
+  - id: pair_e8ca0f1c8c7a4e16b7614f06b2f77040
+    name: Accept
+    value: application/json
+    description: ""
+authentication: {}
+metaSortKey: -1690285540043
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

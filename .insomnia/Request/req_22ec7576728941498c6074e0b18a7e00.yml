@@ -1,0 +1,93 @@
+_id: req_22ec7576728941498c6074e0b18a7e00
+type: Request
+parentId: fld_5e01d9e74b4f485aa3a1fedc8c33a720
+modified: 1690536223648
+created: 1690536209608
+url: "{{tollBridgeUrl}}/v1/tlbr/ods-toll-trx"
+name: "[TBR] Create toll transaction"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "ClientId": "Demo20230104",
+        "TrxNbr": "3606eedc-90cd-11ed-a1eb-0242ac120002",
+        "TrxDate": "2023-10-01T10:00:00Z",
+        "TrxType": "BILL",
+        "OBU": "12354",
+        "Geschaftsbereich": "MYTO_SK",
+        "CardNbr": "7896638020002928",
+        "LicensePlate": "9T92153",
+        "Country": "DE",
+        "EntryGate": "DE01-120",
+        "ExitGate": "DE01-150",
+        "Currency": "EUR",
+        "UnitNetPrice": 47.61,
+        "UnitGrossPrice": 47.61,
+        "GrossAmount": 47.61,
+        "NetAmount": 47.61,
+        "VatRate": 0.0,
+        "VatAmount": 0.0,
+        "pan": null,
+        "lsva": null,
+        "Id": 357145110,
+        "MappingID": "Transaction_BillingTransaction_NAV16",
+        "SystemID": "NAV01",
+        "ProductInstanceNbr": "12020",
+        "ServiceCategory": "TOLL",
+        "ServiceSubCategory": "NON_EETS",
+        "ProviderCode": "TCL",
+        "ArticleName": "Automatic Toll",
+        "ArticleCode": "TDE034",
+        "ArticleDesc": null,
+        "CardAlias": null,
+        "CardRef": null,
+        "SiteName": null,
+        "SiteCode": null,
+        "Quantity": 1.0,
+        "QuantityUnit": null,
+        "obu": null,
+        "CancelledFlag": 0,
+        "InvoicedFlag": 0,
+        "InvoiceNbr": "2004011159647",
+        "Odometer": null,
+        "ArticleValidityFrom": null,
+        "ArticleValidityTo": null,
+        "TrxSource": null,
+        "HGVTrxType": null,
+        "HGVTariff": null,
+        "EVIGSystem": null,
+        "PAN": null,
+        "TSPCode": null,
+        "ITCardType": null,
+        "LSVA": null,
+        "DiscountRate": null,
+        "CardHolder": null,
+        "BookingDate": null,
+        "FeeAmount": null,
+        "OpenLoopTrxType": null,
+        "SalesOrderNbr": "E20040259206",
+        "SalesOrderLineNbr": 10000,
+        "InvoicingCurrency": "EUR",
+        "InvoicingGrossAmount": 47.61,
+        "InvoicingNetAmount": 47.61,
+        "InvExchRate": 1.0,
+        "InvLineNbr": "10000",
+        "ProcessingDate": null,
+        "InvoiceShowOnWebDate": "2023-10-01T10:54:23.03Z",
+        "ReceiptNbr": null
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690536209608
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,43 @@
+_id: req_d1a8145aa3e644129e7b2821ed291267
+type: Request
+parentId: fld_e87ef0759c9043f793b042fcae307e5a
+modified: 1690284924470
+created: 1690284911042
+url: ""
+name: GEN - CLI - BOOT - All options
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientIdPrefix": "GEN",
+        "clientCount": 1,
+        "productContractCount": 4,
+        "productContractTypes": ["ONE", "VECTOR_FORWARDER", "VECTOR_HAULIER"],
+        "productContractTypePercentDistribution": [25, 25, 50],
+        "productContractRiskProfiles": ["A", "B"],
+        "productContractRiskProfilesPercentDistribution": [50, 50],
+        "selfVectorAllowed": true,
+        "totalCreditLimitMin": 5000,
+        "totalCreditLimitMax": 500000,
+        "haulierRevolvingLimitAmountMin": 10,
+        "haulierRevolvingLimitAmountMax": 100,
+        "haulierRevolvingLimitPeriodDays": [5, 7],
+        "dryRun": false,
+        "hauliersCreationDelay": "PT2s",
+        "resultViews": ["TRANSACTIONS_API_INPUT", "TREE_FULL", "STATISTICS"]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690284911042
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,35 @@
+_id: req_4e104dc6dd0a4e7aa06f5809cad72f2b
+type: Request
+parentId: fld_a5a0d47fdfcd49e6b1a0a9c90ef25844
+modified: 1690540720956
+created: 1690540706947
+url: https://ewalletdev2export.blob.core.windows.net/test-container/machine-readable-business-employment-data-june-2022-quarter.csv
+name: Blob storage SAS blob item Fixed format
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: sv
+    value: 2021-08-06
+  - name: sr
+    value: b
+  - name: sp
+    value: r
+  - name: sig
+    value: 86xKnW+54/e5meafbRrIQj2ccCTV+n7dmhJjF/T8m8w=
+  - name: st
+    value: 2022-10-17T15:30:03Z
+  - name: se
+    value: 2022-10-17T16:30:03Z
+  - name: spr
+    value: https
+headers: []
+authentication: {}
+metaSortKey: -1690540706947
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

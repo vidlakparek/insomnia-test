@@ -1,0 +1,33 @@
+_id: req_ede422781cc4433888f9e2f7e6a8be1e
+type: Request
+parentId: fld_a126695368ba477e9576e1372e5250bb
+modified: 1690535990841
+created: 1690535979693
+url: "{{clientUrl}}/v2/clients/MP200/contracts/vector/haulier"
+name: Create VECTOR (haulier)
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "productContractNumber": "MP200H01",
+      "parentProductContractNumber": "MP200F01",
+      "name": "SOMEONE",
+      "mainCurrency": "EUR",
+      "revolvingLimitAmount": 100.50,
+      "revolvingLimitPeriodDays": 7
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690535870028
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

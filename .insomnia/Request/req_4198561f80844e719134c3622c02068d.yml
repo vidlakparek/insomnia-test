@@ -1,0 +1,46 @@
+_id: req_4198561f80844e719134c3622c02068d
+type: Request
+parentId: fld_25b5841825d842b784f5c2485030602b
+modified: 1690284998295
+created: 1690284975483
+url: "{{generatorUrl}}/v1/bootstrap/transactions"
+name: GEN - TX - BOOT - B4F Demo Client
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientProductContracts": [
+            {
+                "clientId": "GEN202307111000000734",
+                "productContractNumber": "GEN202307111000000734ONE1"
+            }
+        ],
+        "transactionCount": 30,
+        "daysCount": 30,
+        "minimalCarCount": 3,
+        "countries": ["CZ", "SK", "IT", "HU", "GR"],
+        "countriesPercentDistribution": [25, 25, 20, 20, 10],
+        "services": ["FUEL", "TOLL_BILL", "TOLL_EST", "FEE", "BENEFIT"],
+        "servicesPercentDistribution": [40, 20, 20, 10, 10],
+        "statuses": ["ACCEPTED", "ADJUSTED", "CANCELLED"],
+        "statusesPercentDistribution": [90, 5, 5],
+        "deposits": [],
+        "invoicedServicesPercentage": {
+           "FUEL": 40
+        }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690284975483
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,45 @@
+_id: req_5fdbd30df88e4905b547ca5abe1146d6
+type: Request
+parentId: fld_25b5841825d842b784f5c2485030602b
+modified: 1690285044326
+created: 1690285039434
+url: "{{generatorUrl}}/v1/bootstrap/transactions"
+name: GEN - TX - BOOT - Invoiced
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "clientProductContracts": [
+            {
+                "clientId": "GEN202306151000000627",
+                "productContractNumber": "GEN202306151000000627ONE1"
+            }
+        ],
+        "transactionCount": 10,
+        "daysCount": -1,
+        "minimalCarCount": 3,
+        "countries": ["SK", "IT", "GR"],
+        "countriesPercentDistribution": [33, 33, 34],
+        "services": ["FUEL"],
+        "servicesPercentDistribution": [100],
+        "statuses": ["ACCEPTED"],
+        "statusesPercentDistribution": [100],
+        "invoicedServicesPercentage": {
+           "FUEL": 50
+        }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690284943262.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

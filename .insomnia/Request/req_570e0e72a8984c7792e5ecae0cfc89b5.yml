@@ -1,0 +1,38 @@
+_id: req_570e0e72a8984c7792e5ecae0cfc89b5
+type: Request
+parentId: fld_6e0bcf0344204b02ae9ba6f1acb1d32f
+modified: 1690286824591
+created: 1690286771171
+url: "{{generatorUrl}}/v1/countries/:countryCode/locations/:id"
+name: Update Toll Gate Pair for Country
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "entryGateName": "string",
+        "exitGateName": "string",
+        "distanceKm": 0
+    }
+parameters:
+  - id: pair_fa94bcb353254446a5086933403c33f3
+    name: countryCode
+    value: ex
+    description: ""
+  - id: pair_d90ed42849d24c97bdbe2ff288c4a390
+    name: id
+    value: adipisicing reprehenderit proident
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690286771171
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

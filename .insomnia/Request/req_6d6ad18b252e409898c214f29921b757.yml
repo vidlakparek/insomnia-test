@@ -1,0 +1,33 @@
+_id: req_6d6ad18b252e409898c214f29921b757
+type: Request
+parentId: fld_3be327fad20a4469896e409f376e0d28
+modified: 1690536139511
+created: 1690536125420
+url: "{{depositBridgeUrl}}/v1/dpbr/productContractDeposit"
+name: Add deposit with Invoice
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "clientId": "GEN202305291000000526",
+      "productContractNbr": "GEN202305291000000526ONE1",
+      "amount": 3112,
+      "currency": "EUR",
+      "transactionDate": "2023-05-29T14:09:00.03Z",
+      "invoiceNumber": "SK2305252016144180849"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690536088699
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

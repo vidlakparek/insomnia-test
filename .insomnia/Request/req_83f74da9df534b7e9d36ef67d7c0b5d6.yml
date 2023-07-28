@@ -1,0 +1,93 @@
+_id: req_83f74da9df534b7e9d36ef67d7c0b5d6
+type: Request
+parentId: fld_e6ec2a79bd2449edb0fcfe1b5fe7ce93
+modified: 1690540871933
+created: 1690540862159
+url: "{{feeBridgeUrl}}/v1/feebr/ods-fee-trx"
+name: Ods Benefit Trx
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "obu": null,
+        "pan": null,
+        "lsva": null,
+        "Id": 357145105,
+        "ClientId": "Demo20230104",
+        "MappingID": "Transaction_BillingTransaction_NAV16",
+        "SystemID": "NAV01",
+        "ProductInstanceNbr": "12020",
+        "Geschaftsbereich": "MYTO DE",
+        "ServiceCategory": "TOLL",
+        "ServiceSubCategory": "NON_EETS",
+        "TrxNbr": "70875576-90b7-11ed-a1eb-0242ac120002",
+        "ProviderCode": "TCL",
+        "TrxDate": "2023-10-01T06:00:00Z",
+        "ArticleName": "Automatic Toll",
+        "ArticleCode": "TDE034",
+        "ArticleDesc": null,
+        "CardNbr": "7896638020002928",
+        "CardAlias": null,
+        "CardRef": null,
+        "LicensePlate": "9T92153",
+        "Country": "DE",
+        "SiteName": null,
+        "SiteCode": null,
+        "Quantity": 1.0,
+        "QuantityUnit": "LTR",
+        "Currency": "EUR",
+        "UnitNetPrice": 47.61,
+        "UnitGrossPrice": 47.61,
+        "GrossAmount": -47.61,
+        "NetAmount": -47.61,
+        "CancelledFlag": 0,
+        "InvoicedFlag": 1,
+        "InvoiceNbr": "2004011159647",
+        "VatRate": 0.0,
+        "VatAmount": 0.0,
+        "Odometer": null,
+        "OBU": null,
+        "EntryGate": null,
+        "ExitGate": null,
+        "ArticleValidityFrom": null,
+        "ArticleValidityTo": null,
+        "TrxSource": null,
+        "HGVTrxType": null,
+        "HGVTariff": null,
+        "EVIGSystem": null,
+        "PAN": null,
+        "TSPCode": null,
+        "ITCardType": null,
+        "LSVA": null,
+        "DiscountRate": null,
+        "CardHolder": null,
+        "BookingDate": null,
+        "FeeAmount": null,
+        "OpenLoopTrxType": null,
+        "SalesOrderNbr": "E20040259206",
+        "SalesOrderLineNbr": 10000,
+        "InvoicingCurrency": "EUR",
+        "InvoicingGrossAmount": 47.61,
+        "InvoicingNetAmount": 47.61,
+        "InvExchRate": 1.0,
+        "InvLineNbr": "10000",
+        "ProcessingDate": null,
+        "TrxType": "BILL",
+        "InvoiceShowOnWebDate": "2023-10-01T07:54:23.03Z",
+        "ReceiptNbr": null
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690540862159
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_f3db9ee5e98e4c289b9c7be5b33d9138
+type: Request
+parentId: fld_2981cccc506043408469e04fbeb65169
+modified: 1690286280743
+created: 1690286261544
+url: "{{generatorUrl}}/v1/countries/:countryCode"
+name: Get Country
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_c112652b7d2c4fd39ff130717210ddcb
+    name: countryCode
+    value: cz
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1690285539943
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

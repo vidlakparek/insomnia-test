@@ -1,0 +1,29 @@
+_id: req_18155ff5f4ec40b7bdb01546b75bfc0b
+type: Request
+parentId: fld_4c43bf28f0f646ec8418b35a7c307e0d
+modified: 1690540929012
+created: 1690540919043
+url: "{{invoiceUrl}}/v1/inv/invoiceProlongation/calculate"
+name: Invoice Prolongation
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "ewalletId": "GEN202306131000000611ONE1",
+        "documentNumber": "GEN_IT23061315511000000053"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690540919043
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

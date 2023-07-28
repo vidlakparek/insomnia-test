@@ -1,0 +1,21 @@
+_id: req_915c22422e5342f4894dce6be44f82ee
+type: Request
+parentId: fld_f0ca3c90a5f44df9803cfc1ccc48c192
+modified: 1690536154200
+created: 1690536149204
+url: https://accr.gentlewater-661e4cef.northeurope.azurecontainerapps.io/v1/accr/MP2022071503/2022-07-14
+name: ACCR - calculate
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1690536149204
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

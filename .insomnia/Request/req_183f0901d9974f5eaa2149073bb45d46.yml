@@ -1,0 +1,31 @@
+_id: req_183f0901d9974f5eaa2149073bb45d46
+type: Request
+parentId: fld_3be327fad20a4469896e409f376e0d28
+modified: 1690536106090
+created: 1690536088749
+url: "{{depositBridgeUrl}}/v1/dpbr/productContractDeposit"
+name: Add deposit
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "clientId": "TP29112022",
+      "productContractNbr": "TP29112022VH01",
+      "amount": 250.50,
+      "transactionDate": "2022-11-11T07:54:23.03Z"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1690536088749
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
